@@ -28,8 +28,7 @@ export default function Navbar({ handleClick }) {
                 border="1px solid gray"
                 borderBottom="none"
                 bg="white"
-                box
-                shadow="
+                boxShadow="
                 5px 5px 0 0 rgb(243,243,243) inset,
                 -5px 5px 0 0 rgb(243,243,243) inset,
                 0 -5px 0 0 rgb(243,243,243) inset
@@ -51,8 +50,7 @@ export default function Navbar({ handleClick }) {
                 mr={5}
                 border="1px solid gray"
                 bg="white"
-                box
-                shadow="
+                boxShadow="
                     5px 5px 0 0 rgb(243,243,243) inset,
                     -5px 5px 0 0 rgb(243,243,243) inset,
                     0 -5px 0 0 rgb(243,243,243) inset
@@ -67,7 +65,9 @@ export default function Navbar({ handleClick }) {
                     <Center>
                         <Box h="40px" w="100%" mt={5}>
                             <Text
-                                onClick={() => handleClick("About Me")}
+                                onClick={() => {
+                                    handleClick("About Me")
+                                }}
                                 cursor="pointer"
                             >
                                 About Me
@@ -106,8 +106,7 @@ export default function Navbar({ handleClick }) {
                 justify="center"
                 align="center"
                 bg="white"
-                box
-                shadow="
+                boxShadow="
                     5px 5px 0 0 rgb(243,243,243) inset,
                     5px -5px 0 0 rgb(243,243,243) inset,
                     -5px -5px 0 0 rgb(243,243,243) inset

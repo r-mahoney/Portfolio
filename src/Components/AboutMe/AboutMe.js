@@ -3,20 +3,20 @@ import {
     Flex,
     Heading,
     Icon,
+    Image,
     List,
-    ListIcon,
-    ListItem,
-    OrderedList,
     SimpleGrid,
     Text,
-    UnorderedList,
 } from "@chakra-ui/react";
+import front from "../../images/front.PNG";
 import React from "react";
-import { TbBrandJavascript } from "react-icons/tb";
-import { IoLogoReact } from "react-icons/io5";
 import { BiLogoPostgresql } from "react-icons/bi";
 import { FaNodeJs } from "react-icons/fa";
-import { MdCheckCircle, MdSettings } from "react-icons/md";
+import { SiE, SiExpress } from "react-icons/si";
+import { IoLogoReact } from "react-icons/io5";
+import { TbBrandJavascript } from "react-icons/tb";
+import ListItems from "./ListItems";
+import { column1, column2 } from "./skills";
 
 function AboutMe() {
     return (
@@ -31,9 +31,12 @@ function AboutMe() {
                     <Text mt={5} ml={5} mb={5} fontWeight={700} fontSize="15pt">
                         Hello, I'm Ryan Mahoney
                     </Text>
-                    <Flex display="flex">
+                    <Flex
+                        display="flex"
+                        flexDirection={{ base: "column", md: "row" }}
+                    >
                         <Flex flex={1} flexDirection="column">
-                            <Text textAlign="center">My Background</Text>
+                            <Text textAlign="left" ml={5} fontWeight={600}>My Background</Text>
                             <Text fontSize="10pt" ml={5} mt={1} mr={3} mb={3}>
                                 I am a chemist turned software engineer. I went
                                 to college for chemistry and right out of
@@ -49,7 +52,7 @@ function AboutMe() {
                             </Text>
                         </Flex>
                         <Flex flex={1} flexDirection="column">
-                            <Text textAlign="center">
+                            <Text textAlign="left" ml={5} fontWeight={600}>
                                 What I'm Currently Doing
                             </Text>
                             <Text fontSize="10pt" ml={5} mt={1} mr={3} mb={3}>
@@ -68,7 +71,7 @@ function AboutMe() {
                             </Text>
                         </Flex>
                         <Flex flex={1} flexDirection="column">
-                            <Text textAlign="center">What I Hope To Do</Text>
+                            <Text textAlign="left" ml={5} fontWeight={600}>What I Hope To Do</Text>
                             <Text fontSize="10pt" ml={5} mt={1} mr={3} mb={3}>
                                 My passion is for creating application with user
                                 experiences that make people want to continue to
@@ -91,6 +94,7 @@ function AboutMe() {
                     bg="white"
                     width="100%"
                     display="flex"
+                    flexDirection={{ base: "column", md: "row" }}
                 >
                     <Flex
                         flexDirection="column"
@@ -98,17 +102,60 @@ function AboutMe() {
                         alignItems="center"
                         mt={2}
                     >
-                        <Heading size="md">Tech Stack</Heading>
-                        <Flex>
+                        <Heading size="md" mb={3}>
+                            Tech Stack
+                        </Heading>
+                        <Flex mb={3}>
                             <Icon
                                 as={TbBrandJavascript}
                                 fontSize={40}
                                 mr={3}
                             ></Icon>
                             <Icon as={IoLogoReact} fontSize={40} mr={3}></Icon>
+                            <Icon as={SiExpress} fontSize={40} mr={3}></Icon>
                             <Icon as={FaNodeJs} fontSize={40} mr={3}></Icon>
                             <Icon as={BiLogoPostgresql} fontSize={40}></Icon>
                         </Flex>
+                        <Flex mb={3}>
+                            <Flex flexDir="column">
+                                <Image src={front} h="52px" w="240px" />
+                                <Image
+                                    src={require("../../images/frontTech.PNG")}
+                                    h="100px"
+                                    w="240px"
+                                />
+                            </Flex>
+                            <Flex flexDir="column">
+                                <Image
+                                    src={require("../../images/res.PNG")}
+                                    h="52px"
+                                    w="240px"
+                                />
+                                <Image
+                                    src={require("../../images/restech.PNG")}
+                                    h="100px"
+                                    w="240px"
+                                />
+                            </Flex>
+                            <Flex flexDir="column">
+                                <Image
+                                    src={require("../../images/port.PNG")}
+                                    h="52px"
+                                    w="240px"
+                                />
+                                <Image
+                                    src={require("../../images/portTech.PNG")}
+                                    h="100px"
+                                    w="240px"
+                                />
+                            </Flex>
+                        </Flex>
+                        <Text textAlign="center" m={3}>
+                            Most of my projects are completed in a JavaScript,
+                            React, Express. Node stack. Occassionally I use
+                            TypeScript in a side project in order to gain
+                            experience
+                        </Text>
                     </Flex>
                     <Flex
                         flex={1}
@@ -116,63 +163,37 @@ function AboutMe() {
                         justifyContent="center"
                         alignItems="center"
                         mt={2}
+                        height="fit-content"
                     >
                         <Heading size="md">Current Skills</Heading>
-                        <SimpleGrid gap={10} p={10} columns={3}>
+                        <SimpleGrid
+                            gap={10}
+                            p={10}
+                            columns={2}
+                            justifyContent="center"
+                            alignItems="center"
+                        >
                             <Box>
-                                <List p={2} fontSize="10pt">
-                                    <ListItem>
-                                        <ListIcon as={MdCheckCircle} />
-                                        JavaScript
-                                    </ListItem>
-                                    <ListItem>
-                                        <ListIcon as={MdCheckCircle} />
-                                        Typescript
-                                    </ListItem>
-                                    <ListItem>
-                                        <ListIcon as={MdCheckCircle} />
-                                        HTML/CSS
-                                    </ListItem>
-                                    <ListItem>
-                                        <ListIcon as={MdCheckCircle} />
-                                        React
-                                    </ListItem>
-                                    <ListItem>
-                                        <ListIcon as={MdCheckCircle} />
-                                        Next.js
-                                    </ListItem>
-                                    <ListItem>
-                                        <ListIcon as={MdCheckCircle} />
-                                        Recoil
-                                    </ListItem>
+                                <List p={2} fontSize={{ base: "8pt", md: "10pt" }}>
+                                    {column1.map((skill) => (
+                                        <ListItems
+                                            listicle={skill}
+                                            key={skill}
+                                        />
+                                    ))}
                                 </List>
                             </Box>
                             <Box>
-                                <List p={2} fontSize="10pt">
-                                    <ListItem>
-                                        <ListIcon as={MdCheckCircle} />
-                                        HTML/CSS
-                                    </ListItem>
-                                    <ListItem>
-                                        <ListIcon as={MdCheckCircle} />
-                                        Bootstrap
-                                    </ListItem>
-                                    <ListItem>
-                                        <ListIcon as={MdCheckCircle} />
-                                        ChakraUI
-                                    </ListItem>
-                                    <ListItem>
-                                        <ListIcon as={MdCheckCircle} />
-                                        Node.js
-                                    </ListItem>
-                                    <ListItem>
-                                        <ListIcon as={MdCheckCircle} />
-                                        Express
-                                    </ListItem>
-                                    <ListItem>
-                                        <ListIcon as={MdCheckCircle} />
-                                        PostgreSQL
-                                    </ListItem>
+                                <List
+                                    p={2}
+                                    fontSize={{ base: "8pt", md: "10pt" }}
+                                >
+                                    {column2.map((skill) => (
+                                        <ListItems
+                                            listicle={skill}
+                                            key={skill}
+                                        />
+                                    ))}
                                 </List>
                             </Box>
                         </SimpleGrid>
