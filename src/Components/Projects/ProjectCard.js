@@ -14,9 +14,8 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import { AiFillGithub } from "react-icons/ai";
-import { IoLogoVercel } from "react-icons/io5";
 
-function ProjectCard({ name, githubLink, liveLink, summary, images, subheading }) {
+function ProjectCard({ name, githubLink, liveLink, summary, images, subheading, liveIcon }) {
     return (
         <Card m={5}>
             <CardHeader>
@@ -54,7 +53,7 @@ function ProjectCard({ name, githubLink, liveLink, summary, images, subheading }
                             </Text>
                             {liveLink && (
                                 <>
-                                    <Icon as={IoLogoVercel} fontSize={25} mr={2}/>
+                                    <Icon as={liveIcon} fontSize={25} mr={2}/>
                                     <Text>
                                         See the live demo{" "}
                                         <Link
