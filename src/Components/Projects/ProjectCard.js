@@ -6,6 +6,7 @@ import {
     Flex,
     Heading,
     Icon,
+    Image,
     Link,
     Stack,
     StackDivider,
@@ -15,7 +16,7 @@ import React from "react";
 import { AiFillGithub } from "react-icons/ai";
 import { IoLogoVercel } from "react-icons/io5";
 
-function ProjectCard({ name, githubLink, summary, image }) {
+function ProjectCard({ name, githubLink, liveLink, summary, images }) {
     return (
         <Card m={5}>
             <CardHeader>
@@ -36,7 +37,7 @@ function ProjectCard({ name, githubLink, summary, image }) {
                         <Heading size="xs" textTransform="uppercase">
                             Links
                         </Heading>
-                        <Flex display='flex' flexDirection='column' >
+                        <Flex display="flex" flexDirection="column">
                             <Icon as={AiFillGithub} fontSize={25} />
                             <Text>
                                 See the project code repo{" "}
@@ -48,19 +49,64 @@ function ProjectCard({ name, githubLink, summary, image }) {
                                     here
                                 </Link>
                             </Text>
-                            <Icon as={IoLogoVercel} fontSize={25} />
-                            <Text>
-                                See the live demo{" "}
-                                <Link
-                                    target="_blank"
-                                    href={githubLink}
-                                    color="blue"
-                                >
-                                    here
-                                </Link>
-                            </Text>
+                            {liveLink && (
+                                <>
+                                    <Icon as={IoLogoVercel} fontSize={25} />
+                                    <Text>
+                                        See the live demo{" "}
+                                        <Link
+                                            target="_blank"
+                                            href={liveLink}
+                                            color="blue"
+                                        >
+                                            here
+                                        </Link>
+                                    </Text>
+                                </>
+                            )}
                         </Flex>
                     </Box>
+                    {images && (
+                        <Box>
+                            <Heading
+                                size="xs"
+                                textTransform="uppercase"
+                                alignSelf="left"
+                            >
+                                Images
+                            </Heading>
+                            <Flex
+                                display="flex"
+                                flexDirection="column"
+                                alignItems="center"
+                                overflowY="scroll"
+                                maxH="250px"
+                                sx={{
+                                    "&::-webkit-scrollbar-thumb": {
+                                        backgroundColor: "gray",
+                                        borderRadius: "20px",
+                                        border: "3px solid white",
+                                    },
+                                    "&::-webkit-scrollbar-track": {
+                                        background: "none",
+                                    },
+                                    "&::-webkit-scrollbar": {
+                                        width: "12px",
+                                    },
+                                }}
+                            >
+                                {images.map((image, idx) => (
+                                    <Image
+                                        key={idx}
+                                        src={image}
+                                        boxSize="500px"
+                                        objectFit="fill"
+                                        mb={3}
+                                    />
+                                ))}
+                            </Flex>
+                        </Box>
+                    )}
                 </Stack>
             </CardBody>
         </Card>

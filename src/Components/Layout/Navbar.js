@@ -19,7 +19,6 @@ export default function Navbar({ handleClick }) {
         <Flex
             display="flex"
             flexDirection="column"
-            // position="fixed"
         >
             <Flex
                 direction="column"
