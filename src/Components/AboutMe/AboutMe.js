@@ -1,45 +1,183 @@
-import { Flex, Text } from "@chakra-ui/react";
+import {
+    Box,
+    Flex,
+    Heading,
+    Icon,
+    List,
+    ListIcon,
+    ListItem,
+    OrderedList,
+    SimpleGrid,
+    Text,
+    UnorderedList,
+} from "@chakra-ui/react";
 import React from "react";
+import { TbBrandJavascript } from "react-icons/tb";
+import { IoLogoReact } from "react-icons/io5";
+import { BiLogoPostgresql } from "react-icons/bi";
+import { FaNodeJs } from "react-icons/fa";
+import { MdCheckCircle, MdSettings } from "react-icons/md";
 
 function AboutMe() {
     return (
         <Flex m={5} display="flex" flexDir="column">
-            <Flex
-                border="1px solid gray"
-                mb={2}
-                borderRadius="10px 10px 0 0"
-                display="flex"
-                flexDir="column"
-                bg="white"
-                box
-                shadow="
-                5px 5px 0 0 beige inset,
-                -5px 5px 0 0 beige inset,
-                0 -5px 0 0 beige inset
-                "
-            >
-                <Text mt={5} ml={5} fontWeight={700} fontSize="15pt">
-                    Hello, I'm Ryan Mahoney
-                </Text>
-                <Text
-                    fontSize="10pt"
-                    ml={5}
-                    mt={1}
-                    mr={3}
-                    mb={3}
+            <Flex border="1px solid gray" mb={2} borderRadius="10px 10px 0 0">
+                <Flex
+                    flexDir="column"
+                    m={5}
+                    bg="white"
+                    borderRadius="10px 10px 0 0"
                 >
-                    Hey there! I'm a{" "}
-                    <span style={{ fontWeight: "700" }}>
-                        Full Stack Web Developer
-                    </span>{" "}
-                    specializing in front end and back end application
-                    development using JavaScript. I have about 1 year of web development under
-                    my belt having built multiple full stack applications using React on the front
-                    end and Node.js and Express on the back-end.
-                </Text>
+                    <Text mt={5} ml={5} mb={5} fontWeight={700} fontSize="15pt">
+                        Hello, I'm Ryan Mahoney
+                    </Text>
+                    <Flex display="flex">
+                        <Flex flex={1} flexDirection="column">
+                            <Text textAlign="center">My Background</Text>
+                            <Text fontSize="10pt" ml={5} mt={1} mr={3} mb={3}>
+                                I am a chemist turned software engineer. I went
+                                to college for chemistry and right out of
+                                college joined a diagnostics lab where I spent 5
+                                years in a fast paced metric driven environment
+                                using a lot of applications with poorly designed
+                                UIs. I spent most of my time training new and
+                                current employees until i started leading a
+                                project to updrade some of our more
+                                sophisticated analyzers. During that, I found a
+                                passion for debugging and writing code which led
+                                me to pursue a full time career in development.
+                            </Text>
+                        </Flex>
+                        <Flex flex={1} flexDirection="column">
+                            <Text textAlign="center">
+                                What I'm Currently Doing
+                            </Text>
+                            <Text fontSize="10pt" ml={5} mt={1} mr={3} mb={3}>
+                                After completeing an intensive software
+                                engineering program where I spent 50-60 hours
+                                per week learning some popular technologies,
+                                when I am not applying for full time engineering
+                                positions, I am spending my time working on
+                                projects to keep my skills sharp. I just
+                                completed a project building a reddit clone in
+                                order to gain familiarity with Next.js, Recoil,
+                                and Firebase. I am now focusing on a 3rd party
+                                plugin for a note taking tool, collaborating
+                                with a UI/UX designer to make metadata more
+                                accessible to new users.
+                            </Text>
+                        </Flex>
+                        <Flex flex={1} flexDirection="column">
+                            <Text textAlign="center">What I Hope To Do</Text>
+                            <Text fontSize="10pt" ml={5} mt={1} mr={3} mb={3}>
+                                My passion is for creating application with user
+                                experiences that make people want to continue to
+                                use the app. One of the big pushes for me to
+                                change careers was a constant thought of "How
+                                hard can it be to make this app better to use?"
+                                I hope to find a job where I can be a part of a
+                                team making peoples lives easier and building
+                                things that dont give them the same frustrations
+                                that I once had.
+                            </Text>
+                        </Flex>
+                    </Flex>
+                </Flex>
             </Flex>
             <Flex border="1px solid gray" borderRadius="0 0 10px 10px">
-                <h2>Skills</h2>
+                <Flex
+                    m={5}
+                    borderRadius="0 0 10px 10px"
+                    bg="white"
+                    width="100%"
+                    display="flex"
+                >
+                    <Flex
+                        flexDirection="column"
+                        flex={1}
+                        alignItems="center"
+                        mt={2}
+                    >
+                        <Heading size="md">Tech Stack</Heading>
+                        <Flex>
+                            <Icon
+                                as={TbBrandJavascript}
+                                fontSize={40}
+                                mr={3}
+                            ></Icon>
+                            <Icon as={IoLogoReact} fontSize={40} mr={3}></Icon>
+                            <Icon as={FaNodeJs} fontSize={40} mr={3}></Icon>
+                            <Icon as={BiLogoPostgresql} fontSize={40}></Icon>
+                        </Flex>
+                    </Flex>
+                    <Flex
+                        flex={1}
+                        flexDirection="column"
+                        justifyContent="center"
+                        alignItems="center"
+                        mt={2}
+                    >
+                        <Heading size="md">Current Skills</Heading>
+                        <SimpleGrid gap={10} p={10} columns={3}>
+                            <Box>
+                                <List p={2} fontSize="10pt">
+                                    <ListItem>
+                                        <ListIcon as={MdCheckCircle} />
+                                        JavaScript
+                                    </ListItem>
+                                    <ListItem>
+                                        <ListIcon as={MdCheckCircle} />
+                                        Typescript
+                                    </ListItem>
+                                    <ListItem>
+                                        <ListIcon as={MdCheckCircle} />
+                                        HTML/CSS
+                                    </ListItem>
+                                    <ListItem>
+                                        <ListIcon as={MdCheckCircle} />
+                                        React
+                                    </ListItem>
+                                    <ListItem>
+                                        <ListIcon as={MdCheckCircle} />
+                                        Next.js
+                                    </ListItem>
+                                    <ListItem>
+                                        <ListIcon as={MdCheckCircle} />
+                                        Recoil
+                                    </ListItem>
+                                </List>
+                            </Box>
+                            <Box>
+                                <List p={2} fontSize="10pt">
+                                    <ListItem>
+                                        <ListIcon as={MdCheckCircle} />
+                                        HTML/CSS
+                                    </ListItem>
+                                    <ListItem>
+                                        <ListIcon as={MdCheckCircle} />
+                                        Bootstrap
+                                    </ListItem>
+                                    <ListItem>
+                                        <ListIcon as={MdCheckCircle} />
+                                        ChakraUI
+                                    </ListItem>
+                                    <ListItem>
+                                        <ListIcon as={MdCheckCircle} />
+                                        Node.js
+                                    </ListItem>
+                                    <ListItem>
+                                        <ListIcon as={MdCheckCircle} />
+                                        Express
+                                    </ListItem>
+                                    <ListItem>
+                                        <ListIcon as={MdCheckCircle} />
+                                        PostgreSQL
+                                    </ListItem>
+                                </List>
+                            </Box>
+                        </SimpleGrid>
+                    </Flex>
+                </Flex>
             </Flex>
         </Flex>
     );

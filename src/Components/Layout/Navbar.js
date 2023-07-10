@@ -30,9 +30,9 @@ export default function Navbar({ handleClick }) {
                 bg="white"
                 box
                 shadow="
-                5px 5px 0 0 beige inset,
-                -5px 5px 0 0 beige inset,
-                0 -5px 0 0 beige inset
+                5px 5px 0 0 rgb(243,243,243) inset,
+                -5px 5px 0 0 rgb(243,243,243) inset,
+                0 -5px 0 0 rgb(243,243,243) inset
                 "
             >
                 <Flex mt={5} ml={5} mr={5} mb={3}>
@@ -53,9 +53,9 @@ export default function Navbar({ handleClick }) {
                 bg="white"
                 box
                 shadow="
-                    5px 5px 0 0 beige inset,
-                    -5px 5px 0 0 beige inset,
-                    0 -5px 0 0 beige inset
+                    5px 5px 0 0 rgb(243,243,243) inset,
+                    -5px 5px 0 0 rgb(243,243,243) inset,
+                    0 -5px 0 0 rgb(243,243,243) inset
                 "
             >
                 <VStack
@@ -108,9 +108,9 @@ export default function Navbar({ handleClick }) {
                 bg="white"
                 box
                 shadow="
-                    5px 5px 0 0 beige inset,
-                    5px -5px 0 0 beige inset,
-                    -5px -5px 0 0 beige inset
+                    5px 5px 0 0 rgb(243,243,243) inset,
+                    5px -5px 0 0 rgb(243,243,243) inset,
+                    -5px -5px 0 0 rgb(243,243,243) inset
                 "
             >
                 <Stack display="flex" flexDirection="row">
