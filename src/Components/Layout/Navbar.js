@@ -16,10 +16,7 @@ import profPic from "../../images/avatar.png";
 
 export default function Navbar({ handleClick }) {
     return (
-        <Flex
-            display="flex"
-            flexDirection="column"
-        >
+        <Flex display="flex" flexDirection="column">
             <Flex
                 direction="column"
                 justify="center"
@@ -30,6 +27,13 @@ export default function Navbar({ handleClick }) {
                 borderRadius="10px 10px 0 0 "
                 border="1px solid gray"
                 borderBottom="none"
+                bg="white"
+                box
+                shadow="
+                5px 5px 0 0 beige inset,
+                -5px 5px 0 0 beige inset,
+                0 -5px 0 0 beige inset
+                "
             >
                 <Flex mt={5} ml={5} mr={5} mb={3}>
                     <Avatar src={profPic} size="lg" />
@@ -41,7 +45,19 @@ export default function Navbar({ handleClick }) {
                     </Box>
                 </Flex>
             </Flex>
-            <Flex direction="column" ml={5} mr={5} border="1px solid gray">
+            <Flex
+                direction="column"
+                ml={5}
+                mr={5}
+                border="1px solid gray"
+                bg="white"
+                box
+                shadow="
+                    5px 5px 0 0 beige inset,
+                    -5px 5px 0 0 beige inset,
+                    0 -5px 0 0 beige inset
+                "
+            >
                 <VStack
                     divider={<StackDivider borderColor="gray.200" />}
                     spacing={1}
@@ -89,6 +105,13 @@ export default function Navbar({ handleClick }) {
                 borderRadius="0 0 10px 10px"
                 justify="center"
                 align="center"
+                bg="white"
+                box
+                shadow="
+                    5px 5px 0 0 beige inset,
+                    5px -5px 0 0 beige inset,
+                    -5px -5px 0 0 beige inset
+                "
             >
                 <Stack display="flex" flexDirection="row">
                     <Box m={2}>

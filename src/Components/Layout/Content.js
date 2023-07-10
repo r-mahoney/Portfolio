@@ -23,6 +23,7 @@ export default function Content({ clickedTab }) {
                             liveLink={project.liveLink}
                             summary={project.summary}
                             images={project.images}
+                            subheading={project.subheading}
                         />
                     </Flex>
                 ))}

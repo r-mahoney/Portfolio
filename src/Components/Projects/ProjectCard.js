@@ -16,11 +16,14 @@ import React from "react";
 import { AiFillGithub } from "react-icons/ai";
 import { IoLogoVercel } from "react-icons/io5";
 
-function ProjectCard({ name, githubLink, liveLink, summary, images }) {
+function ProjectCard({ name, githubLink, liveLink, summary, images, subheading }) {
     return (
         <Card m={5}>
             <CardHeader>
                 <Heading size="md">{name}</Heading>
+                {subheading && (
+                    <Text>{subheading}</Text>
+                )}
             </CardHeader>
 
             <CardBody>
@@ -37,9 +40,9 @@ function ProjectCard({ name, githubLink, liveLink, summary, images }) {
                         <Heading size="xs" textTransform="uppercase">
                             Links
                         </Heading>
-                        <Flex display="flex" flexDirection="column">
-                            <Icon as={AiFillGithub} fontSize={25} />
-                            <Text>
+                        <Flex display="flex" flexDirection="row">
+                            <Icon as={AiFillGithub} fontSize={25} mr={2}/>
+                            <Text mr={5}>
                                 See the project code repo{" "}
                                 <Link
                                     target="_blank"
@@ -51,7 +54,7 @@ function ProjectCard({ name, githubLink, liveLink, summary, images }) {
                             </Text>
                             {liveLink && (
                                 <>
-                                    <Icon as={IoLogoVercel} fontSize={25} />
+                                    <Icon as={IoLogoVercel} fontSize={25} mr={2}/>
                                     <Text>
                                         See the live demo{" "}
                                         <Link
