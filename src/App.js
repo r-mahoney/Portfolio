@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import React, {useState} from "react";
+import { ChakraProvider } from '@chakra-ui/react'
+import PageContent from "./Components/Layout/PageContent";
+import Content from "./Components/Layout/Content";
+import Navbar from "./Components/Layout/Navbar";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const [clickedTab, setClickedTab] = useState("About Me")
+
+  const handleClick = (tabValue) => {
+    setClickedTab(tabValue)
+  }
+
+    return (
+        <ChakraProvider>
+            <PageContent>
+                <Navbar handleClick={handleClick}/>
+                <Content clickedTab={clickedTab}/>
+            </PageContent>
+        </ChakraProvider>
+    );
 }
 
 export default App;
