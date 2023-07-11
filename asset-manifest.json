@@ -1,9 +1,10 @@
 {
   "files": {
     "main.css": "/static/css/main.b65679f3.css",
-    "main.js": "/static/js/main.5ce09b90.js",
+    "main.js": "/static/js/main.ee24b51a.js",
     "static/media/avatar.png": "/static/media/avatar.32caac7869d0a0b0dde4.png",
     "static/media/reddit1.png": "/static/media/reddit1.af5db663e23053c3f4b6.png",
+    "static/media/Resume7_10_23.pdf": "/static/media/Resume7_10_23.34caa621729677cac030.pdf",
     "static/media/reddit2.png": "/static/media/reddit2.b312938568bd068248ae.png",
     "static/media/reddit3.png": "/static/media/reddit3.f9db1d12165eaaf25e22.png",
     "static/media/res1.PNG": "/static/media/res1.b99fa59062b7a24c7457.PNG",
@@ -11,18 +12,12 @@
     "static/media/res3.PNG": "/static/media/res3.dd749ad018bc43d61126.PNG",
     "static/media/res4.PNG": "/static/media/res4.7056253fdcbd61622c54.PNG",
     "static/media/note1.png": "/static/media/note1.f5367ca5eac54eb07f9d.png",
-    "static/media/res.PNG": "/static/media/res.7e01d8ad2b36d36c7610.PNG",
-    "static/media/front.PNG": "/static/media/front.5725ff210139f3b9c17a.PNG",
-    "static/media/frontTech.PNG": "/static/media/frontTech.8c2da449eeb6c4757be3.PNG",
-    "static/media/restech.PNG": "/static/media/restech.982f4d3e664ab0aeb052.PNG",
-    "static/media/portTech.PNG": "/static/media/portTech.70bba6be39cd288fe252.PNG",
-    "static/media/port.PNG": "/static/media/port.a2aae615e50184549e15.PNG",
     "index.html": "/index.html",
     "main.b65679f3.css.map": "/static/css/main.b65679f3.css.map",
-    "main.5ce09b90.js.map": "/static/js/main.5ce09b90.js.map"
+    "main.ee24b51a.js.map": "/static/js/main.ee24b51a.js.map"
   },
   "entrypoints": [
     "static/css/main.b65679f3.css",
-    "static/js/main.5ce09b90.js"
+    "static/js/main.ee24b51a.js"
   ]
 }
