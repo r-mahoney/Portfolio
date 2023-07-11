@@ -14,7 +14,12 @@ import { BsGithub, BsLinkedin } from "react-icons/bs";
 
 function ContactMe() {
     return (
-        <Flex m={5} border="1px solid gray" borderRadius="10px">
+        <Flex
+            m={5}
+            border="1px solid gray"
+            borderRadius="10px"
+            flexDirection={{ base: "column", md: "row" }}
+        >
             <Flex
                 m={5}
                 borderRadius="10px"
@@ -32,11 +37,19 @@ function ContactMe() {
                     </Text>
                     <List m={5}>
                         <Flex m={2} ml={-2}>
-                            <ListItem flex={1}>
+                            <ListItem
+                                flex={1}
+                                fontSize={{ base: "8pt", md: "12pt" }}
+                                display="flex"
+                                flexDir={{ base: "column", md: "row" }}
+                            >
                                 <ListIcon as={BsLinkedin} fontSize={20} />
-                                LinkedIn
+                                <Text>LinkedIn</Text>
                             </ListItem>
-                            <ListItem flex={2}>
+                            <ListItem
+                                flex={2}
+                                fontSize={{ base: "8pt", md: "12pt" }}
+                            >
                                 <Link
                                     target="_blank"
                                     href="https://www.linkedin.com/in/ryan-mahoney211/"
@@ -46,11 +59,19 @@ function ContactMe() {
                             </ListItem>
                         </Flex>
                         <Flex m={2} ml={-2}>
-                            <ListItem flex={1}>
+                            <ListItem
+                                flex={1}
+                                fontSize={{ base: "8pt", md: "12pt" }}
+                                display="flex"
+                                flexDir={{ base: "column", md: "row" }}
+                            >
                                 <ListIcon as={BsGithub} fontSize={20} />
-                                GitHub
+                                <Text>GitHub</Text>
                             </ListItem>
-                            <ListItem flex={2}>
+                            <ListItem
+                                flex={2}
+                                fontSize={{ base: "8pt", md: "12pt" }}
+                            >
                                 <Link
                                     target="_blank"
                                     href="https://github.com/r-mahoney"
@@ -60,11 +81,19 @@ function ContactMe() {
                             </ListItem>
                         </Flex>
                         <Flex m={2} ml={-2}>
-                            <ListItem flex={1}>
+                            <ListItem
+                                flex={1}
+                                fontSize={{ base: "8pt", md: "12pt" }}
+                                display="flex"
+                                flexDir={{ base: "column", md: "row" }}
+                            >
                                 <ListIcon as={TfiEmail} fontSize={20} />
-                                Email
+                                <Text>Email</Text>
                             </ListItem>
-                            <ListItem flex={2}>
+                            <ListItem
+                                flex={2}
+                                fontSize={{ base: "8pt", md: "12pt" }}
+                            >
                                 <Link href={`mailto:rsmahoney211@gmail.com`}>
                                     rsmahoney211@gmail.com
                                 </Link>
@@ -74,7 +103,10 @@ function ContactMe() {
                 </Flex>
             </Flex>
             <Flex m={5} borderRadius="10px" flex={1}>
-                <Image src={require("../../images/housetown.jpg")} borderRadius='10px'/>
+                <Image
+                    src={require("../../images/housetown.jpg")}
+                    borderRadius="10px"
+                />
             </Flex>
         </Flex>
     );

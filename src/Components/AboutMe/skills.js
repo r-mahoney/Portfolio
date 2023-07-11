@@ -8,10 +8,10 @@ export const column1 = [
 ];
 
 export const column2 = [
-    "HTML / CSS",
     "Bootstrap",
     "ChakraUI",
     "Node.js",
     "Express",
+    "KNEX",
     "PostgreSQL",
 ];
