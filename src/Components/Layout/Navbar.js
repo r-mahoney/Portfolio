@@ -3,6 +3,7 @@ import { AiFillGithub, AiFillLinkedin, AiFillMail } from "react-icons/ai";
 import {
     Avatar,
     Box,
+    Button,
     Center,
     Flex,
     Icon,
@@ -42,6 +43,23 @@ export default function Navbar({ handleClick }) {
                         <Text fontWeight="bold">Ryan Mahoney</Text>
                         <Text fontSize="sm">Software Engineer</Text>
                     </Box>
+                </Flex>
+                <Flex>
+                    <Button
+                        ml={3}
+                        mr={3}
+                        mb={3}
+                        variant="outline"
+                        colorScheme="telegram"
+                        size="sm"
+                    >
+                        <Link
+                            target="_blank"
+                            href={require("../../assets/Resume7_10_23.pdf")}
+                        >
+                            Download Resume
+                        </Link>
+                    </Button>
                 </Flex>
             </Flex>
             <Flex

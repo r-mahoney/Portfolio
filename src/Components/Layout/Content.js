@@ -4,6 +4,7 @@ import { projects } from "../Projects/projectObj";
 import ProjectCard from "../Projects/ProjectCard";
 import AboutMe from "../AboutMe/AboutMe";
 import ScrollToTop from "react-scroll-to-top";
+import ContactMe from "../ContactMe/ContactMe";
 
 export default function Content({ clickedTab }) {
     return (
@@ -14,7 +15,11 @@ export default function Content({ clickedTab }) {
                         <Tabs>
                             <TabList>
                                 {projects.map((project, idx) => (
-                                    <Tab><a href={`#${project.name}`}>{project.name}</a></Tab>
+                                    <Tab>
+                                        <a href={`#${project.name}`}>
+                                            {project.name}
+                                        </a>
+                                    </Tab>
                                 ))}
                             </TabList>
                         </Tabs>
@@ -61,6 +66,7 @@ export default function Content({ clickedTab }) {
                 </>
             )}
             {clickedTab === "About Me" && <AboutMe />}
+            {clickedTab === "Contact Me" && <ContactMe />}
         </>
     );
 }
