@@ -66,7 +66,7 @@ export default function Navbar({ handleClick }) {
                         <Box h="40px" w="100%" mt={5}>
                             <Text
                                 onClick={() => {
-                                    handleClick("About Me")
+                                    handleClick("About Me");
                                 }}
                                 cursor="pointer"
                             >

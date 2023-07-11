@@ -8,7 +8,6 @@ import {
     SimpleGrid,
     Text,
 } from "@chakra-ui/react";
-import front from "../../images/front.PNG";
 import React from "react";
 import { BiLogoPostgresql } from "react-icons/bi";
 import { FaNodeJs } from "react-icons/fa";
@@ -116,38 +115,26 @@ function AboutMe() {
                             <Icon as={FaNodeJs} fontSize={40} mr={3}></Icon>
                             <Icon as={BiLogoPostgresql} fontSize={40}></Icon>
                         </Flex>
-                        <Flex mb={3}>
+                        <Flex m={3}>
                             <Flex flexDir="column">
-                                <Image src={front} h="52px" w="240px" />
-                                <Image
-                                    src={require("../../images/frontTech.PNG")}
-                                    h="100px"
-                                    w="240px"
-                                />
+                                <Image src={require('../../images/front0.png')} h="105px" w="240px" />
+                               
                             </Flex>
                             <Flex flexDir="column">
                                 <Image
-                                    src={require("../../images/res.PNG")}
-                                    h="52px"
-                                    w="240px"
-                                />
-                                <Image
-                                    src={require("../../images/restech.PNG")}
+                                    src={require("../../images/res0.png")}
                                     h="100px"
                                     w="240px"
                                 />
+                               
                             </Flex>
                             <Flex flexDir="column">
                                 <Image
-                                    src={require("../../images/port.PNG")}
-                                    h="52px"
-                                    w="240px"
-                                />
-                                <Image
-                                    src={require("../../images/portTech.PNG")}
+                                    src={require("../../images/port3.png")}
                                     h="100px"
                                     w="240px"
                                 />
+                                
                             </Flex>
                         </Flex>
                         <Text textAlign="center" m={3}>
