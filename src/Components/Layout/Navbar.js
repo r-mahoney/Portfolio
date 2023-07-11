@@ -52,10 +52,16 @@ export default function Navbar({ handleClick }) {
                         variant="outline"
                         colorScheme="telegram"
                         size="sm"
+                        className="resume"
                     >
                         <Link
                             target="_blank"
                             href={require("../../assets/Resume7_10_23.pdf")}
+                            onClick={() => {
+                                window.dataLayer.push({
+                                    'event': "resumeClicked",
+                                });
+                            }}
                         >
                             Download Resume
                         </Link>

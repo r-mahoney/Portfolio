@@ -11,8 +11,8 @@ import {
 import React from "react";
 import { BiLogoPostgresql } from "react-icons/bi";
 import { FaNodeJs } from "react-icons/fa";
-import { SiE, SiExpress } from "react-icons/si";
 import { IoLogoReact } from "react-icons/io5";
+import { SiExpress } from "react-icons/si";
 import { TbBrandJavascript } from "react-icons/tb";
 import ListItems from "./ListItems";
 import { column1, column2 } from "./skills";
