@@ -7,6 +7,9 @@ import ScrollToTop from "react-scroll-to-top";
 import ContactMe from "../ContactMe/ContactMe";
 
 export default function Content({ clickedTab }) {
+    const handleNavClick = (id) => {
+        document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+    };
     return (
         <>
             {clickedTab === "Projects" && (
@@ -15,7 +18,12 @@ export default function Content({ clickedTab }) {
                         <Tabs>
                             <TabList>
                                 {projects.map((project, idx) => (
-                                    <Tab>
+                                    <Tab
+                                        onClick={(e) => {
+                                            e.preventDefault();
+                                            handleNavClick(project.name);
+                                        }}
+                                    >
                                         <a href={`#${project.name}`}>
                                             {project.name}
                                         </a>
