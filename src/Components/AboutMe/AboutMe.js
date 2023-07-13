@@ -40,12 +40,12 @@ function AboutMe() {
                                 I am a chemist turned software engineer. I went
                                 to college for chemistry and right out of
                                 college joined a diagnostics lab where I spent 5
-                                years in a fast paced metric driven environment
+                                years in a fast paced, metric driven environment
                                 using a lot of applications with poorly designed
                                 UIs. I spent most of my time training new and
-                                current employees until i started leading a
+                                current employees until I started leading a
                                 project to updrade some of our more
-                                sophisticated analyzers. During that, I found a
+                                sophisticated analyzers. During that time, I found a
                                 passion for debugging and writing code which led
                                 me to pursue a full time career in development.
                             </Text>
@@ -141,7 +141,7 @@ function AboutMe() {
                             Most of my projects are completed in a JavaScript,
                             React, Express. Node stack. Occassionally I use
                             TypeScript in a side project in order to gain
-                            experience
+                            experience.
                         </Text>
                     </Flex>
                     <Flex

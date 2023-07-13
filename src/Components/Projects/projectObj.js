@@ -29,9 +29,9 @@ export const projects = [
         subheading: "3rd Party Obsidian Plugin",
         githubLink: "https://github.com/r-mahoney/FrontmatterButton",
         summary: `Obsidian is a note-taking app allowing users to write up notes using markdown language. Part of this app allows a user to add
-            front matter, or a block of YAML text key/value pairs, that translates into metadate for that users note. Currently, unless a user already knows how
+            front matter, or a block of YAML text key/value pairs, that translates into metadata for that users note. Currently, unless a user already knows how
              to add the YAML code block to their note and what key properties Obsidian accepts, using the front matter is not intuitive. Working with a UI/UX designer,
-              our hope is to make this functionality more accessible by showing a button on title hover and adding a more user firnedly UI to any note a user wants to add metadata to.`,
+              our hope is to make this functionality more accessible by showing a button on title hover and adding a more user friendly UI to any note a user wants to add metadata to.`,
         images: [note1, note2, note3],
     },
     {
@@ -40,8 +40,8 @@ export const projects = [
         githubLink: "https://github.com/r-mahoney/ReservationApp",
         liveLink: "https://reservationapp-raoj.onrender.com/dashboard",
         liveIcon: SiRender,
-        summary: `This was the first full stack application that I built during my software engineering program. Previous to this, I had only worked exclusively on the beack-end portion 
-        or th efront-end portion. It is supposed to emmulate a restaurant information management system showing reservations for the current day along with reservation status. It also shows available tables and table status. 
+        summary: `This was the first full stack application that I built during my software engineering program. Previous to this, I had only worked exclusively on the back-end portion 
+        or the front-end portion. It is supposed to emmulate a restaurant information management system showing reservations for the current day along with reservation status. It also shows available tables and table status. 
         A user is able to create, edit, and delete a reservation as well as create a table. Reservations can then be assigned to a table as long as it is unnocupied and the capacity of the table 
         is greater than the capacity of the reservation party size. A user can also search for a reservation using a partial or full phone number. React and Bootstrap were used for the front end UI. Back-end implemented React Router 
         and express to build a RESTful API in order to make HTTP requests for all of the reservation data stored on the connected PostgreSQL database. 

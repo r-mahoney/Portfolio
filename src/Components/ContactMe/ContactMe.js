@@ -33,7 +33,7 @@ function ContactMe() {
                     </Heading>
                     <Text>
                         I am currently available for hire and open to any
-                        cooperative projects
+                        cooperative projects.
                     </Text>
                     <List m={5}>
                         <Flex m={2} ml={-2}>
