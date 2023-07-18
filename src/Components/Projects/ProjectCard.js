@@ -39,7 +39,7 @@ function ProjectCard({ name, githubLink, liveLink, summary, images, subheading, 
                         <Heading size="xs" textTransform="uppercase">
                             Links
                         </Heading>
-                        <Flex display="flex" flexDirection="row">
+                        <Flex display="flex" flexDirection={{base: "column", md: "row"}}>
                             <Icon as={AiFillGithub} fontSize={25} mr={2}/>
                             <Text mr={5}>
                                 See the project code repo{" "}

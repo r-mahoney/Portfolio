@@ -1,23 +1,31 @@
+import { ChakraProvider } from "@chakra-ui/react";
+import React from "react";
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import React, {useState} from "react";
-import { theme } from "./chakra/theme";
-import { ChakraProvider } from '@chakra-ui/react'
-import PageContent from "./Components/Layout/PageContent";
 import Content from "./Components/Layout/Content";
 import Navbar from "./Components/Layout/Navbar";
+import PageContent from "./Components/Layout/PageContent";
+import { theme } from "./chakra/theme";
 
 function App() {
-  const [clickedTab, setClickedTab] = useState("About Me")
-
-  const handleClick = (tabValue) => {
-    setClickedTab(tabValue)
-  }
-
     return (
         <ChakraProvider theme={theme}>
             <PageContent>
-                <Navbar handleClick={handleClick}/>
-                <Content clickedTab={clickedTab}/>
+                <Navbar />
+                <Routes>
+                    <Route
+                        path="/"
+                        element={<Content clickedTab={"About Me"} />}
+                    />
+                    <Route
+                        path="/Projects"
+                        element={<Content clickedTab={"Projects"} />}
+                    />
+                    <Route
+                        path="/Contact"
+                        element={<Content clickedTab={"Contact Me"} />}
+                    />
+                </Routes>
             </PageContent>
         </ChakraProvider>
     );

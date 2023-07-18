@@ -1,5 +1,6 @@
 import React from "react";
 import { AiFillGithub, AiFillLinkedin, AiFillMail } from "react-icons/ai";
+import { Link as RouterLink } from "react-router-dom";
 import {
     Avatar,
     Box,
@@ -15,9 +16,9 @@ import {
 } from "@chakra-ui/react";
 import profPic from "../../images/avatar.png";
 
-export default function Navbar({ handleClick }) {
+export default function Navbar() {
     return (
-        <Flex display="flex" flexDirection="column">
+        <Flex display="flex" flexDirection="column" position="sticky" top="0">
             <Flex
                 direction="column"
                 justify="center"
@@ -59,7 +60,7 @@ export default function Navbar({ handleClick }) {
                             href={require("../../assets/Resume7_10_23.pdf")}
                             onClick={() => {
                                 window.dataLayer.push({
-                                    'event': "resumeClicked",
+                                    event: "resumeClicked",
                                 });
                             }}
                         >
@@ -88,33 +89,24 @@ export default function Navbar({ handleClick }) {
                 >
                     <Center>
                         <Box h="40px" w="100%" mt={5}>
-                            <Text
-                                onClick={() => {
-                                    handleClick("About Me");
-                                }}
-                                cursor="pointer"
-                            >
-                                About Me
+                            <Text cursor="pointer">
+                                <RouterLink to="/">About Me</RouterLink>
                             </Text>
                         </Box>
                     </Center>
                     <Center>
                         <Box h="40px" w="100%" mt={3}>
-                            <Text
-                                onClick={() => handleClick("Projects")}
-                                cursor="pointer"
-                            >
-                                Projects
+                            <Text cursor="pointer">
+                                <RouterLink to="/Projects">Projects</RouterLink>
                             </Text>
                         </Box>
                     </Center>
                     <Center>
                         <Box h="40px" w="100%" mt={3}>
-                            <Text
-                                onClick={() => handleClick("Contact Me")}
-                                cursor="pointer"
-                            >
-                                Contact Me
+                            <Text cursor="pointer">
+                                <RouterLink to="/Contact">
+                                    Contact Me
+                                </RouterLink>
                             </Text>
                         </Box>
                     </Center>

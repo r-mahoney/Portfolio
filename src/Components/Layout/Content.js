@@ -1,10 +1,9 @@
-import { Flex, Tab, Tabs, TabList } from "@chakra-ui/react";
+import { Flex, Tab, TabList, Tabs } from "@chakra-ui/react";
 import React from "react";
-import { projects } from "../Projects/projectObj";
-import ProjectCard from "../Projects/ProjectCard";
 import AboutMe from "../AboutMe/AboutMe";
-import ScrollToTop from "react-scroll-to-top";
 import ContactMe from "../ContactMe/ContactMe";
+import ProjectCard from "../Projects/ProjectCard";
+import { projects } from "../Projects/projectObj";
 
 export default function Content({ clickedTab }) {
     const handleNavClick = (id) => {
@@ -53,22 +52,6 @@ export default function Content({ clickedTab }) {
                                     liveIcon={project.liveIcon}
                                 />
                             </Flex>
-                            {window.innerWidth > 800 && (
-                                <ScrollToTop
-                                    smooth
-                                    component={
-                                        <p
-                                            style={{
-                                                fontSize: "8pt",
-                                                fontWeight: "700",
-                                            }}
-                                        >
-                                            Scroll to Top
-                                        </p>
-                                    }
-                                    style={{ right: "0", left: "40px" }}
-                                />
-                            )}
                         </>
                     ))}
                 </>
