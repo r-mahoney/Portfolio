@@ -5,6 +5,7 @@ import "./App.css";
 import Content from "./Components/Layout/Content";
 import Navbar from "./Components/Layout/Navbar";
 import PageContent from "./Components/Layout/PageContent";
+import Thumbnail from "./Components/Thumbnail";
 import { theme } from "./chakra/theme";
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
                         path="/Contact"
                         element={<Content clickedTab={"Contact Me"} />}
                     />
+                    <Route path="/image/thumbnail" element={<Thumbnail />} />
                 </Routes>
             </PageContent>
         </ChakraProvider>
