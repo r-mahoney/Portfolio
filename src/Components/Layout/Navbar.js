@@ -57,7 +57,7 @@ export default function Navbar() {
                     >
                         <Link
                             target="_blank"
-                            href={require("../../assets/Resume7_10_23.pdf")}
+                            href={require("../../assets/Resume8-1-2023.pdf")}
                             onClick={() => {
                                 window.dataLayer.push({
                                     event: "resumeClicked",
